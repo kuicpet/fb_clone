@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { signOut, useSession } from 'next-auth/client';
 import { 
     BellIcon,
     HomeIcon,
@@ -18,6 +19,8 @@ import {
 import HeaderIcon from './HeaderIcon';
 
 function Header() {
+    const [session] = useSession();
+
     return (
         <div className="flex items-center sticky top-0 z-50 bg-white p-2 lg:px-5 shadow-md">
             {/* Left */}
@@ -43,6 +46,15 @@ function Header() {
             </div>
             {/* Right */}
             <div className="flex items-center sm:space-x-2 justify-end">
+                {/*Profile Image */}
+                <Image
+                    onClick={signOut}
+                    src={session.user.image}
+                    className="rounded-full cursor-pointer"
+                    width={40}
+                    height={40}
+                    layout="fixed"
+                />
                 <p className="whitespace-nowrap font-semibold pr-3">Kingsley Umujeyan</p>
                 <ViewGridIcon className="icon" />
                 <ChatIcon className="icon" />
