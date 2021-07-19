@@ -4,6 +4,13 @@
 
 @layer components {
     .icon {
-        @apply hidden xl:inline-flex p-2 w-10 h-10;
+        @apply hidden 
+        xl:inline-flex 
+        p-2 w-10 h-10 
+        bg-gray-200 
+        rounded-full 
+        text-gray-700 
+        cursor-pointer
+        hover:bg-gray-300
     }
 }
