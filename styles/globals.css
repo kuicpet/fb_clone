@@ -11,6 +11,18 @@
         rounded-full 
         text-gray-700 
         cursor-pointer
-        hover:bg-gray-300
+        hover:bg-gray-300;
+    }
+    
+    .inputIcon {
+        @apply flex 
+        items-center
+        space-x-1 
+        hover:bg-gray-100 
+        flex-grow-0 
+        justify-center 
+        p-2
+        cursor-pointer
+        rounded-xl;
     }
 }
