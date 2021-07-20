@@ -5,10 +5,11 @@ import Login from '../components/Login';
 import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
 import Widget from '../components/Widget';
+import { db } from '../firebase';
 
 
 export default function Home({ session }) {
-  
+
   if(!session) return <Login />
 
   return (
@@ -31,9 +32,19 @@ export default function Home({ session }) {
 export async function getServerSideProps(context){
   // get the user
   const session = await getSession(context);
+
+  /*let posts = db.collection('posts').orderBy('timestamp', 'desc').get();
+
+  const docs = (await posts).docs.map(post => ({
+    id: post.id,
+    ...post.data(),
+    timestamp: null
+  }))*/
+ 
   return {
     props : {
-      session
+      session,
+      //post: docs,
     }
   }
 }

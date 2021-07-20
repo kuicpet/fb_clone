@@ -9,7 +9,8 @@ function Posts() {
     )
     return (
         <div>
-            {realTimePosts?.docs.map((post) => (
+            {  
+                realTimePosts?.docs.map((post) => (
                 <Post 
                     key={post.id}
                     name={post.data().name}
@@ -19,7 +20,8 @@ function Posts() {
                     image={post.data().image}
                     postImage={post.data().postImage}
                 />
-            ))};
+            ) 
+            )};
         </div>
     )
 }
