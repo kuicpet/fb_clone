@@ -98,7 +98,7 @@ function InputBox() {
                     transition duration-150 
                     transform hover:scale-105
                     cursor-pointer">
-                    <img className="h-10 object-contain" src={imageToPost} alt="" /> 
+                    <Image className="h-10 object-contain" src={imageToPost} alt="" /> 
                     <p className="text-xs text-center text-red-500">Remove</p>   
                 </div>}
             </div>

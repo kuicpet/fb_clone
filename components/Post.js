@@ -34,6 +34,7 @@ function Post({ name, message, email, timestamp, image, postImage }) {
                         src={postImage}
                         objectFit="cover"
                         layout="fill"
+                        alt=""
                     />
                 </div>
             )}
