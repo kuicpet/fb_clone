@@ -8,7 +8,9 @@ import Widget from '../components/Widget';
 
 
 export default function Home({ session }) {
+  
   if(!session) return <Login />
+
   return (
     <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>

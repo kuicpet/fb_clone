@@ -24,9 +24,9 @@ function Widget() {
                     <DotsHorizontalIcon className="h-6" />
                 </div>
             </div>
-           {contacts.map((contact) => {
+           {contacts.map((contact) => 
                <Contact key={contact.src} src={contact.src} name={contact.name} />
-           })}
+           )}
         </div>
     )
 }
