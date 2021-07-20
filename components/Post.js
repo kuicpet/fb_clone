@@ -7,7 +7,7 @@ function Post({ name, message, email, timestamp, image, postImage }) {
         <div className="flex flex-col">
             <div className="p-5 bg-white mt-5 rounded-t-2xl shadow-sm">
                 <div className="flex items-center space-x-2">
-                    <img 
+                    <Image
                         className=""
                         src={image}
                         width={40}

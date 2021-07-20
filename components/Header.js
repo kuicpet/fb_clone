@@ -49,9 +49,7 @@ function Header() {
                     <HeaderIcon Icon={UserGroupIcon}/>
                 </div>
             </div>
-            {/* Right */}
             <div className="flex items-center sm:space-x-2 justify-end">
-                {/*Profile Image */}
                 <Image
                     onClick={signOut}
                     src={session.user.image}
