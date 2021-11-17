@@ -10,7 +10,6 @@ import {
 import {
     ChevronDownIcon,
     ShoppingBagIcon,
-    UsersGroupIcon
 } from "@heroicons/react/outline";
 import SidebarRow from './SidebarRow';
 
